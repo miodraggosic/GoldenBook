@@ -1,0 +1,25 @@
+.btn {
+  font-family: var(--mySecondFont);
+  font-size: 1.5vw;
+  font-weight: 500;
+  background-color: var(--white);
+  padding: 2px 16px;
+  border-radius: 4px;
+  border: 0;
+}
+.btn a {
+  color: rgba(0, 0, 0, 0.87);
+  width: 100%;
+  text-decoration: none;
+}
+.inactive {
+  background: none;
+}
+.inactive a {
+  color: var(--white);
+}
+
+.singUpBig {
+  font-size: 1.8vw;
+  width: 64%;
+}
