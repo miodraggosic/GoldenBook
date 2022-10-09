@@ -18,8 +18,16 @@
 .inactive a {
   color: var(--white);
 }
+.inactive:hover {
+  background-color: var(--white);
+}
+.inactive a:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
 
 .singUpBig {
   font-size: 1.8vw;
   width: 64%;
+  padding: 8px 16px;
+  margin-top: 2vh;
 }
