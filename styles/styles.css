@@ -1,0 +1,107 @@
+@import url(./buttons.css);
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./fonts/Montserrat-Regular.ttf);
+  /* font-weight: 700; */
+}
+@font-face {
+  font-family: Karla;
+  src: url(./fonts/Karla-Regular.ttf);
+}
+:root {
+  --white: #f2efdc;
+  --gray: #837e72;
+  --black: #160f09;
+  --myFirstFont: Montserrat;
+  --mySecondFont: Karla;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--black);
+}
+main {
+  display: flex;
+  justify-content: center;
+  margin: 4vh auto;
+  background-image: url(../assets/Golden_book.svg.png);
+  background-position: 6.47% 100%;
+  background-size: 58% 78%;
+  height: 92vh;
+  background-repeat: no-repeat;
+  position: relative;
+}
+main > div {
+  width: 46%;
+}
+
+main h1 {
+  font-family: var(--myFirstFont);
+  font-weight: 700;
+  font-size: 4.6vw;
+  color: var(--white);
+}
+.right {
+  background: linear-gradient(
+    269.7deg,
+    #f2efdc 0.25%,
+    rgba(242, 239, 220, 0) 99.73%
+  );
+  opacity: 0.5;
+  min-height: 100%;
+}
+
+/* user form start */
+
+.userForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 46%;
+  position: absolute;
+  height: 88vh;
+  right: 7%;
+  top: 6.5%;
+  border-radius: 18px;
+}
+.user {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+}
+
+blockquote {
+  font-family: var(--mySecondFont);
+  font-size: 2.4vw;
+  font-weight: 300;
+  font-style: italic;
+  text-align: end;
+  color: var(--white);
+  margin-top: 10vh;
+  width: 70%;
+}
+
+.userForm div {
+  width: 100%;
+  text-align: end;
+  margin-bottom: 30vh;
+}
+
+.userForm h2 {
+  font-family: var(--myFirstFont);
+  font-weight: 700;
+  font-size: 3.6vw;
+  color: var(--white);
+}
+
+.userForm footer {
+  font-family: var(--mySecondFont);
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: var(--white);
+}
