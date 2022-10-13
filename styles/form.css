@@ -1,0 +1,36 @@
+.userForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 46%;
+  position: absolute;
+  height: 88vh;
+  right: 7%;
+  top: 6.5%;
+}
+.user {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+}
+
+.userForm div {
+  width: 100%;
+  text-align: end;
+  margin-bottom: 30vh;
+}
+
+.userForm h2 {
+  font-family: var(--myFirstFont);
+  font-weight: 700;
+  font-size: 3.6vw;
+  color: var(--white);
+}
+
+.userForm footer {
+  font-family: var(--mySecondFont);
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: var(--white);
+}
