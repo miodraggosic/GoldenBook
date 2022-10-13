@@ -1,4 +1,5 @@
 @import url(./buttons.css);
+@import url(./form.css);
 
 @font-face {
   font-family: Montserrat;
@@ -52,27 +53,8 @@ main h1 {
     rgba(242, 239, 220, 0) 99.73%
   );
   opacity: 0.5;
-  min-height: 100%;
-}
-
-/* user form start */
-
-.userForm {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 46%;
-  position: absolute;
-  height: 88vh;
-  right: 7%;
-  top: 6.5%;
   border-radius: 18px;
-}
-.user {
-  display: flex;
-  justify-content: end;
-  gap: 16px;
+  min-height: 100%;
 }
 
 blockquote {
@@ -84,24 +66,4 @@ blockquote {
   color: var(--white);
   margin-top: 10vh;
   width: 70%;
-}
-
-.userForm div {
-  width: 100%;
-  text-align: end;
-  margin-bottom: 30vh;
-}
-
-.userForm h2 {
-  font-family: var(--myFirstFont);
-  font-weight: 700;
-  font-size: 3.6vw;
-  color: var(--white);
-}
-
-.userForm footer {
-  font-family: var(--mySecondFont);
-  font-size: 1.5vw;
-  font-weight: 500;
-  color: var(--white);
 }
