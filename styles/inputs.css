@@ -25,9 +25,19 @@
   color: rgba(0, 0, 0, 0.87);
 }
 
-.Big {
+.big {
   font-size: 1.8vw;
   width: 60%;
   padding: 8px 16px;
   margin-top: 2vh;
+}
+
+.dark:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+input::placeholder {
+  font-size: 1.2vw;
+  font-weight: 400;
 }
