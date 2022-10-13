@@ -5,31 +5,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles.css">
     <title>Log In</title>
 </head>
 
 <body>
     <main>
-        <h1>GOLDEN BOOK.</h1>
-        <img src="" alt="Golden book image" />
-
-        <div class="loginForm">
-            <form action="">
-                <h2>Login</h2>
-                <input type="email" name="email" id="" placeholder="Email" required />
-                <input type="password" name="password" id="" placeholder="Password" minlength="8" required />
-                <p>Don't have an acount?<a href="singUp.html">Sing Up</a></p>
-
-                <button type="submit" class="loginBig">
-                    <a href="homepage.html">LOGIN</a>
-                </button>
-            </form>
+        <div class="left">
+            <h1>Golden Book.</h1>
+        </div>
+        <div class="right">
         </div>
     </main>
-
-    <footer>
-        <h4>ANGULAR WORKSHOP 2022</h4>
-    </footer>
+    <div class="userForm">
+        <h2>Login</h2>
+        <form class="inputForm" action="">
+            <div>
+                <input type="email" class="input big" name="email" placeholder="Email" required />
+                <input type="password" class="input big" name="password" placeholder="Password" minlength="8"
+                    required />
+                <p>Don't have an acount?<a href="singUp.html">Sing Up</a></p>
+                <div>
+                    <button type="submit" class="input big dark">
+                        <a href="homepage.html">LOGIN</a>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <footer>
+            <h4>ANGULAR WORKSHOP 2022</h4>
+        </footer>
+    </div>
 </body>
 
 </html>
