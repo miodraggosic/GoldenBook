@@ -6,9 +6,9 @@
   justify-content: space-between;
   width: 46%;
   position: absolute;
-  height: 88vh;
+  height: 90vh;
   right: 7%;
-  top: 6.5%;
+  top: 4.5%;
 }
 .userNav {
   display: flex;
@@ -40,16 +40,15 @@
 .inputForm {
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-end;
-  justify-content: space-between;
   width: 100%;
-  gap: 10px;
-  margin-bottom: 30vh;
+  margin-bottom: auto;
 }
 .userForm > h2 {
   width: 60%;
   text-align: left;
-  margin-top: 22vh;
+  /* margin-top: 22vh; */
+  margin-top: auto;
+  margin-bottom: 5%;
 }
 
 .inputForm input {
