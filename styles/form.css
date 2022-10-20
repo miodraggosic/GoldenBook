@@ -8,11 +8,12 @@
   position: absolute;
   height: 90vh;
   right: 7%;
-  top: 4.5%;
+  /* top: 4.5%; */
 }
 .userNav {
   display: flex;
   justify-content: end;
+  margin-block-start: 1vw;
   gap: 16px;
 }
 
