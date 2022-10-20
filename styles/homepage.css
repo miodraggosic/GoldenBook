@@ -1,0 +1,52 @@
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+header {
+  background: linear-gradient(
+    180deg,
+    #f2efdc 0.25%,
+    rgba(242, 239, 220, 0) 99.73%
+  );
+  opacity: 0.5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.burgerMenu {
+  background: #f2efdc;
+  background: url("../assets/images/hamburger.png");
+  background-size: contain;
+  width: 22px;
+  margin-left: 2vw;
+  border: 0;
+  height: 15px;
+  color: var(--white);
+}
+.left h2 {
+  margin-left: 3vw;
+}
+.sideMenu {
+  display: none;
+}
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.library {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.books {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+}
