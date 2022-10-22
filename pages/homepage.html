@@ -15,13 +15,12 @@
     <header>
         <nav>
             <div class="left">
-                <button class="burgerMenu">
+                <button class="burger menu">
                 </button>
                 <h2>Golden Book.</h2>
             </div>
             <div class="right">
-                <button class="avatar">
-                    <img src="../assets/images/avatar.png" alt="avatar user img" />
+                <button class="avatar menu">
                 </button>
             </div>
         </nav>
@@ -32,11 +31,10 @@
         <nav class="sideMenu">
             <ul>
                 <li>
-                    <img src="../assets/images/home.png" alt="" /><a href="#">HOMEPAGE <img
-                            src="../assets/images/right.png" alt="" /></a>
+                    <a href="#"><img src="../assets/images/home.png" alt="" />HOMEPAGE</a>
                 </li>
                 <li>
-                    <img src="../assets/images/list.png" alt="" /><a href="#">CATEGORIES <img
+                    <a href="#"><img src="../assets/images/list.png" alt="" />CATEGORIES <img
                             src="../assets/images/right.png" alt="" /></a>
                     <ul>
                         <li>
@@ -54,7 +52,7 @@
                     </ul>
                 </li>
                 <li>
-                    <img src="../assets/images/admin.png" alt="" /><a href="#">ADMIN <img
+                    <a href="#"><img src="../assets/images/admin.png" alt="" />ADMIN <img
                             src="../assets/images/right.png" alt="" /></a>
                     <ul>
                         <li>
@@ -72,8 +70,8 @@
             <h1>Homepage</h1>
             <!-- filter amd search  -->
             <div class="filter">
-                <input type="search" name="search" id="" placeholder="Search by Book Name" />
-                <select name="filter" id="">
+                <input type="search" name="search" class="search" id="search" placeholder="Search by Book Name" />
+                <select name="categories" class="search" id="categories">
                     <option value="">Filter by Category</option>
                     <option value="">General</option>
                     <option value="">Fantasy</option>
@@ -85,14 +83,13 @@
             <div class="books">
                 <div class="book">
                     <h4 class="bookTittle">Money Power</h4>
-
                     <div class="bookCard">
                         <div class="bookImg">
-                            <img src="#" alt="bookImage" />
+                            <img src="../assets/bookImages/moneyPower.png" alt="bookImage" />
                         </div>
 
                         <div class="bookBio">
-                            <h5 class="bookAuthor">Name Surname, 1998</h5>
+                            <h5 class="bookAuthor">Name Surname, <span> 1998</span></h5>
                             <h6 class="bookCategory">Category: <span>General</span></h6>
                             <p class="bookDeskrp">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -106,10 +103,9 @@
                 </div>
                 <div class="book">
                     <h4 class="bookTittle">My First Love</h4>
-
                     <div class="bookCard">
                         <div class="bookImg">
-                            <img src="#" alt="bookImage" />
+                            <img src="../assets/bookImages/myFirstLover.png" alt="bookImage" />
                         </div>
 
                         <div class="bookBio">
@@ -130,7 +126,7 @@
 
                     <div class="bookCard">
                         <div class="bookImg">
-                            <img src="#" alt="bookImage" />
+                            <img src="../assets/bookImages/myLittleLife.png" alt="bookImage" />
                         </div>
 
                         <div class="bookBio">
@@ -151,7 +147,7 @@
 
                     <div class="bookCard">
                         <div class="bookImg">
-                            <img src="#" alt="bookImage" />
+                            <img src="../assets/bookImages/theLastTrip.png" alt="bookImage" />
                         </div>
 
                         <div class="bookBio">
@@ -174,7 +170,7 @@
 
                     <div class="bookCard">
                         <div class="bookImg">
-                            <img src="#" alt="bookImage" />
+                            <img src="../assets/bookImages/dark.png" alt="bookImage" />
                         </div>
 
                         <div class="bookBio">
@@ -195,7 +191,7 @@
 
                     <div class="bookCard">
                         <div class="bookImg">
-                            <img src="#" alt="bookImage" />
+                            <img src="../assets/bookImages/findMe.png" alt="bookImage" />
                         </div>
 
                         <div class="bookBio">
@@ -218,7 +214,7 @@
             <!-- pagination -->
             <nav class="pagination">
                 <label for="pagesNum">Rows per page:</label>
-                <select name="pagesNum" id="">
+                <select name="pagesNum" id="pagesNum">
                     <option value="6">6</option>
                     <option value="12">12</option>
                     <option value="24">24</option>
