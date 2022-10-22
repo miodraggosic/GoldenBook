@@ -1,52 +1,194 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/fonts/Montserrat-Regular.ttf);
+  /* font-weight: 700; */
+}
+@font-face {
+  font-family: Karla;
+  src: url(../assets/fonts/Karla-Regular.ttf);
+}
+:root {
+  --white: #f2efdc;
+  --gray: #837e72;
+  --black: #160f09;
+  --myFirstFont: Montserrat;
+  --mySecondFont: Karla;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  background-color: var(--black);
+  color: #f2efdc;
 }
-header {
+
+/* header section */
+header,
+footer {
   background: linear-gradient(
     180deg,
     #f2efdc 0.25%,
     rgba(242, 239, 220, 0) 99.73%
   );
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
-nav {
+header nav {
   display: flex;
   justify-content: space-between;
+  padding: 1vw 0;
 }
-.left {
+.left,
+.right {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
 }
-.burgerMenu {
-  background: #f2efdc;
-  background: url("../assets/images/hamburger.png");
-  background-size: contain;
-  width: 22px;
-  margin-left: 2vw;
+.menu {
   border: 0;
-  height: 15px;
   color: var(--white);
 }
-.left h2 {
-  margin-left: 3vw;
+.burger {
+  background: url("../assets/images/hamburger.png");
+  background-position: center;
+  margin-inline-start: 2vw;
+  width: 22px;
+  height: 15px;
 }
+.avatar {
+  background: url("../assets/images/avatar.png");
+  background-position: center;
+  margin-inline-end: 2vw;
+  width: 24px;
+  height: 24px;
+}
+.left h2 {
+  font-family: var(--myFirstFont);
+  font-size: 2vw;
+  margin-left: 2.4vw;
+}
+/* main section */
+
 .sideMenu {
   display: none;
 }
+
 main {
   display: grid;
   grid-template-columns: auto auto;
+  margin: 0 6%;
+  background-image: url(../assets/images/Golden_book.svg.png);
+  background-position: 6.47% 100%;
+  background-size: 58% 78%;
+  background-repeat: no-repeat;
 }
 
 .library {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
 }
+.library h1 {
+  font-family: var(--myFirstFont);
+  font-weight: 700;
+  font-size: 2.2vw;
+  line-height: 2.2vw;
+  margin: 2vh 0;
+}
+
+.filter {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2vw;
+  margin: 2vh 0;
+}
+.search {
+  font: 400 var(--mySecondFont);
+  color: rgba(0, 0, 0, 0.87);
+  background: var(--white);
+  flex: 1;
+  border-radius: 4px 4px 0px 0px;
+  padding: 1vw;
+}
+#search::placeholder {
+  color: rgba(0, 0, 0, 0.87);
+}
 
 .books {
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  row-gap: 4%;
+  column-gap: 2%;
+}
+/* book styles start */
+.book {
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: 4%;
+}
+.bookTittle {
+  font: 700 1.2vw var(--myFirstFont);
+  margin-bottom: 4%;
+}
+
+.bookCard {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 4%;
+}
+.bookImg {
+  flex: 1;
+  border-radius: 4px;
+}
+.bookImg img {
+  /* width: -webkit-fill-available; */
+  height: 100%;
+}
+.bookBio {
+  flex: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  font: 300 1vw var(--mySecondFont);
+}
+.bookAuthor {
+  font-weight: 700;
+}
+.bookAuthor span {
+  font-weight: 300;
+}
+.bookCategory {
+  font-weight: 300;
+}
+
+.bookBio a {
+  width: 70%;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--gray);
+  padding: 2.4% 4%;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* paggination start */
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2%;
+  font: 400 1vw var(--mySecondFont);
+  margin: 2vh 0;
+}
+
+#pagesNum {
+  color: var(--whiteu);
+  background-color: var(--black);
 }
