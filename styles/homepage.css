@@ -29,14 +29,9 @@ body {
 }
 
 /* header section */
-header,
-footer {
-  background: linear-gradient(
-    180deg,
-    #f2efdc 0.25%,
-    rgba(242, 239, 220, 0) 99.73%
-  );
-  /* opacity: 0.5; */
+header {
+  background-image: url(../assets/images/headerBcgr.png);
+  background-size: contain;
 }
 
 header nav {
@@ -76,13 +71,60 @@ header nav {
 /* main section */
 
 .sideMenu {
-  display: none;
+  /* display: none; */
+  border-right: 1px solid var(--white);
+  font: 500 1.4vw var(--mySecondFont);
+  padding: 1vw 2vw;
+  background-image: url(../assets/images/sideMenuBcgr.png);
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-size: 90% 100%;
+}
+
+.sideMenu ul {
+  list-style: none;
+  color: var(--white);
+}
+
+.sideMenu ul li {
+  padding: 1vh;
+}
+
+.home {
+  background-image: url(../assets/images/home.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.categories {
+  background-image: url(../assets/images/list.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.admin {
+  background-image: url(../assets/images/admin.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.sideMenu ul img {
+  padding-right: 1vw;
+}
+
+.sideMenu a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.sideMenu ul ul {
+  padding-left: 2.6vw;
 }
 
 main {
   display: grid;
   grid-template-columns: auto auto;
-  margin: 0 6%;
+
   background-image: url(../assets/images/Golden_book.svg.png);
   background-position: 6.47% 100%;
   background-size: 58% 78%;
@@ -92,20 +134,21 @@ main {
 .library {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
+  margin: 0 6%;
 }
 .library h1 {
   font-family: var(--myFirstFont);
   font-weight: 700;
   font-size: 2.2vw;
   line-height: 2.2vw;
-  margin: 2vh 0;
+  padding: 2vh 0;
 }
 
 .filter {
   display: flex;
   flex-flow: row nowrap;
   gap: 2vw;
-  margin: 2vh 0;
+  padding: 2vh 0;
 }
 .search {
   font: 400 var(--mySecondFont);
@@ -121,9 +164,9 @@ main {
 
 .books {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr 1fr;
-  row-gap: 4%;
-  column-gap: 2%;
+  grid-template: repeat(2, auto) / repeat(3, auto);
+  row-gap: 2vw;
+  column-gap: 2vw;
 }
 /* book styles start */
 .book {
@@ -134,7 +177,7 @@ main {
 }
 .bookTittle {
   font: 700 1.2vw var(--myFirstFont);
-  margin-bottom: 4%;
+  padding-bottom: 4%;
 }
 
 .bookCard {
@@ -147,7 +190,7 @@ main {
   border-radius: 4px;
 }
 .bookImg img {
-  /* width: -webkit-fill-available; */
+  width: -webkit-fill-available;
   height: 100%;
 }
 .bookBio {
@@ -185,10 +228,18 @@ main {
   align-items: center;
   gap: 2%;
   font: 400 1vw var(--mySecondFont);
-  margin: 2vh 0;
+  padding: 2vh 0;
 }
 
 #pagesNum {
-  color: var(--whiteu);
+  color: var(--white);
   background-color: var(--black);
+}
+/* footer section */
+footer {
+  text-align: center;
+  font: 500 1.2vw var(--mySecondFont);
+  padding: 1.4vw 0;
+  background-image: url(../assets/images/footerBcgr.png);
+  background-size: contain;
 }
