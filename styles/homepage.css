@@ -160,13 +160,24 @@ main {
   border-radius: 4px 4px 0px 0px;
   padding: 1vw;
 }
+#search {
+  background-image: url(../assets/images/search.png);
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  background-position: 98%;
+}
+
 #search::placeholder {
   color: rgba(0, 0, 0, 0.87);
 }
 
+#categories option {
+  width: inherit;
+}
+
 .books {
   display: grid;
-  grid-template: repeat(2, auto) / repeat(3, auto);
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   row-gap: 2vw;
   column-gap: 2vw;
 }
