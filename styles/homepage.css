@@ -52,16 +52,20 @@ header nav {
 .burger {
   background: url("../assets/images/hamburger.png");
   background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   margin-inline-start: 2vw;
-  width: 22px;
-  height: 15px;
+  width: 2vw;
+  height: 100%;
 }
 .avatar {
   background: url("../assets/images/avatar.png");
   background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   margin-inline-end: 2vw;
-  width: 24px;
-  height: 24px;
+  width: 2vw;
+  height: 100%;
 }
 .left h2 {
   font-family: var(--myFirstFont);
@@ -84,47 +88,45 @@ header nav {
 .sideMenu ul {
   list-style: none;
   color: var(--white);
+  padding-right: 1vw;
 }
 
 .sideMenu ul li {
-  padding: 1vh;
+  padding: 1.2vh 0;
+}
+.sideMenu a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: var(--white);
+  padding: 0 3vw;
 }
 
 .home {
   background-image: url(../assets/images/home.png);
-  background-repeat: no-repeat;
-  background-position: center left;
 }
 
 .categories {
-  background-image: url(../assets/images/list.png);
-  background-repeat: no-repeat;
-  background-position: center left;
+  background-image: url(../assets/images/list.png),
+    url(../assets/images/right.png);
 }
 
 .admin {
-  background-image: url(../assets/images/admin.png);
+  background-image: url(../assets/images/admin.png),
+    url(../assets/images/right.png);
+}
+
+.home,
+.categories,
+.admin {
   background-repeat: no-repeat;
-  background-position: center left;
-}
-
-.sideMenu ul img {
-  padding-right: 1vw;
-}
-
-.sideMenu a {
-  text-decoration: none;
-  color: var(--white);
-}
-
-.sideMenu ul ul {
-  padding-left: 2.6vw;
+  background-position: center left, center right;
+  background-size: contain, auto;
 }
 
 main {
   display: grid;
   grid-template-columns: auto auto;
-
   background-image: url(../assets/images/Golden_book.svg.png);
   background-position: 6.47% 100%;
   background-size: 58% 78%;
@@ -148,7 +150,7 @@ main {
   display: flex;
   flex-flow: row nowrap;
   gap: 2vw;
-  padding: 2vh 0;
+  padding: 2.6vh 0;
 }
 .search {
   font: 400 var(--mySecondFont);
@@ -170,6 +172,9 @@ main {
 }
 /* book styles start */
 .book {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
   color: var(--black);
   background-color: var(--white);
   border-radius: 4px;
@@ -177,7 +182,7 @@ main {
 }
 .bookTittle {
   font: 700 1.2vw var(--myFirstFont);
-  padding-bottom: 4%;
+  /* padding-bottom: 4%; */
 }
 
 .bookCard {
@@ -185,20 +190,22 @@ main {
   flex-flow: row nowrap;
   column-gap: 4%;
 }
+
 .bookImg {
   flex: 1;
   border-radius: 4px;
 }
+
 .bookImg img {
-  width: -webkit-fill-available;
-  height: 100%;
+  width: 100%;
+  height: -webkit-fill-available;
 }
 .bookBio {
   flex: 2;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  font: 300 1vw var(--mySecondFont);
+  font: 1vw var(--mySecondFont);
 }
 .bookAuthor {
   font-weight: 700;
@@ -209,9 +216,12 @@ main {
 .bookCategory {
   font-weight: 300;
 }
+.bookDeskrp {
+  font-size: 0.8vw;
+}
 
 .bookBio a {
-  width: 70%;
+  width: 80%;
   text-decoration: none;
   color: var(--white);
   background-color: var(--gray);
@@ -226,7 +236,7 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 2%;
+  gap: 4%;
   font: 400 1vw var(--mySecondFont);
   padding: 2vh 0;
 }
@@ -235,11 +245,27 @@ main {
   color: var(--white);
   background-color: var(--black);
 }
+.arrows {
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+.arrows:first-of-type {
+  background: url(../assets/images/left.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.arrows:nth-of-type(2) {
+  background: url(../assets/images/right.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 /* footer section */
 footer {
   text-align: center;
   font: 500 1.2vw var(--mySecondFont);
-  padding: 1.4vw 0;
+  padding: 1vw 0;
   background-image: url(../assets/images/footerBcgr.png);
   background-size: contain;
 }
