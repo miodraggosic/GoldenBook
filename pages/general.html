@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/homepage.css">
     <title>General</title>
 </head>
 
@@ -13,201 +14,232 @@
     <header>
         <nav>
             <div class="left">
-                <button class="menu">
-                    <img src="../assets/hamburger.png" alt="hamburger menu" />
+                <button class="burger menu">
                 </button>
                 <h2>Golden Book.</h2>
             </div>
             <div class="right">
-                <button class="avatar">
-                    <img src="../assets/avatar.png" alt="avatar user img" />
+                <button class="avatar menu">
                 </button>
             </div>
         </nav>
     </header>
-
-    <!-- sidemenu nav-->
-    <nav class="sideMenu">
-        <ul>
-            <li>
-                <img src="../assets/home.png" alt="" /><a href="homepage.html">HOMEPAGE <img src="../assets/right.png"
-                        alt="" /></a>
-            </li>
-            <li>
-                <img src="../assets/list.png" alt="" /><a href="#">CATEGORIES <img src="../assets/right.png"
-                        alt="" /></a>
-                <ul>
-                    <li>
-                        <a href="general.html">General</a>
-                    </li>
-                    <li>
-                        <a href="#">Fantasy</a>
-                    </li>
-                    <li>
-                        <a href="#">History</a>
-                    </li>
-                    <li>
-                        <a href="#">Literary</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <img src="../assets/admin.png" alt="" /><a href="#">ADMIN <img src="../assets/right.png" alt="" /></a>
-                <ul>
-                    <li>
-                        <a href="books.html">Books</a>
-                    </li>
-                    <li>
-                        <a href="categories.html">Categories</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <!-- main section start -->
 
     <main>
-        <div class="breadcrumb">
+        <!-- sidemenu nav-->
+        <nav class="sideMenu">
             <ul>
-                <li><a href="#">Categories /</a></li>
-                <li><a href="#">General</a></li>
+                <li>
+                    <a href="homepage.html" class="home">HOMEPAGE</a>
+                </li>
+                <li>
+                    <a href="#" class="categories">CATEGORIES</a>
+                    <ul>
+                        <li>
+                            <a href="#">General</a>
+                        </li>
+                        <li>
+                            <a href="#">Fantasy</a>
+                        </li>
+                        <li>
+                            <a href="#">History</a>
+                        </li>
+                        <li>
+                            <a href="#">Literary</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#" class="admin">ADMIN</a>
+                    <ul>
+                        <li>
+                            <a href="books.html">Books</a>
+                        </li>
+                        <li>
+                            <a href="categories.html">Categories</a>
+                        </li>
+                    </ul>
+                </li>
+
+
             </ul>
-        </div>
-
-        <h1>General Category</h1>
-
-        <div class="filter">
-            <input type="search" name="search" id="" placeholder="Search by Book Name">
-            <select name="filter" id="">
-                <option value="">Filter by Category</option>
-                <option value="">General</option>
-                <option value="">Fantasy</option>
-                <option value="">History</option>
-                <option value="">Literary</option>
-            </select>
-        </div>
-
-        <div class="books">
-            <div class="book">
-                <h4 class="bookTittle">Money Power</h4>
-
-                <div class="bookCard">
-                    <div class="bookImg">
-                        <img src="#" alt="bookImage">
-                    </div>
-
-                    <div class="bookBio">
-                        <h5 class="bookAuthor">Name Surname, 1998</h5>
-                        <h6 class="bookCategory">Category: <span>General</span></h6>
-                        <p class="bookDeskrp">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a ty ...</p>
-                        <a href="./books/book1.html">BOOK OVERVIEW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="book">
-                <h4 class="bookTittle">My First Love</h4>
-
-                <div class="bookCard">
-                    <div class="bookImg">
-                        <img src="#" alt="bookImage">
-                    </div>
-
-                    <div class="bookBio">
-                        <h5 class="bookAuthor">Name Surname, 2000</h5>
-                        <h6 class="bookCategory">Category: <span>General</span></h6>
-                        <p class="bookDeskrp">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a ty ...</p>
-                        <a href="./books/book2.html">BOOK OVERVIEW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="book">
-                <h4 class="bookTittle">My Little Life</h4>
-
-                <div class="bookCard">
-                    <div class="bookImg">
-                        <img src="#" alt="bookImage">
-                    </div>
-
-                    <div class="bookBio">
-                        <h5 class="bookAuthor">Name Surname, 2005</h5>
-                        <h6 class="bookCategory">Category: <span>General</span></h6>
-                        <p class="bookDeskrp">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a ty ...</p>
-                        <a href="./books/book3.html">BOOK OVERVIEW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="book">
-                <h4 class="bookTittle">Lorem Ipsum Dolor Sit Amet</h4>
-
-                <div class="bookCard">
-                    <div class="bookImg">
-                        <img src="#" alt="bookImage">
-                    </div>
-
-                    <div class="bookBio">
-                        <h5 class="bookAuthor">Name Surname, 2008</h5>
-                        <h6 class="bookCategory">Category: <span>General</span></h6>
-                        <p class="bookDeskrp">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a ty ...</p>
-                        <a href="./books/book4.html">BOOK OVERVIEW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="book">
-                <h4 class="bookTittle">A Noval View of British History</h4>
-
-                <div class="bookCard">
-                    <div class="bookImg">
-                        <img src="#" alt="bookImage">
-                    </div>
-
-                    <div class="bookBio">
-                        <h5 class="bookAuthor">Name Surname, 2018</h5>
-                        <h6 class="bookCategory">Category: <span>General</span></h6>
-                        <p class="bookDeskrp">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a ty ...</p>
-                        <a href="./books/book5.html">BOOK OVERVIEW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="book">
-                <h4 class="bookTittle">The Loards of Rings</h4>
-
-                <div class="bookCard">
-                    <div class="bookImg">
-                        <img src="#" alt="bookImage">
-                    </div>
-
-                    <div class="bookBio">
-                        <h5 class="bookAuthor">Name Surname, 2021</h5>
-                        <h6 class="bookCategory">Category: <span>General</span></h6>
-                        <p class="bookDeskrp">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a ty ...</p>
-                        <a href="./books/book6.html">BOOK OVERVIEW</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <nav class="pagination">
-            <label for="pagesNum">Rows per page:</label>
-            <select name="pagesNum" id="">
-                <option value="6">6</option>
-                <option value="12">12</option>
-                <option value="24">24</option>
-            </select>
-            <span class="pagesAll">1-6 of 100</span>
-            <button class="arrows"><img src="../assets/left.png" alt="previous arrow"></button>
-            <button class="arrows"><img src="../assets/right.png" alt="next arrow"></button>
         </nav>
+
+
+        <div class="library">
+            <div>
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">Categories /</a></li>
+                        <li><a href="#">General</a></li>
+                    </ul>
+                </div>
+
+                <h1>General Category</h1>
+            </div>
+            <!-- filter amd search  -->
+            <div class="filter">
+                <input type="search" name="search" class="search" id="search" placeholder="Search by Book Name" />
+                <select name="categories" class="search" id="categories">
+                    <option value="">Filter by Category</option>
+                    <option value="" selected>General</option>
+                    <option value="">Fantasy</option>
+                    <option value="">History</option>
+                    <option value="">Literary</option>
+                </select>
+            </div>
+            <!-- start of books section -->
+            <div class="books">
+                <div class="book">
+                    <h4 class="bookTittle">Money Power</h4>
+                    <div class="bookCard">
+                        <div class="bookImg">
+                            <img src="../assets/bookImages/moneyPower.png" alt="bookImage" />
+                        </div>
+
+                        <div class="bookBio">
+                            <h5 class="bookAuthor">Name Surname, <span> 1998</span></h5>
+                            <h6 class="bookCategory">Category: <span>General</span></h6>
+                            <p class="bookDeskrp">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a ty ...
+                            </p>
+                            <a href="./books/book1.html">BOOK OVERVIEW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <h4 class="bookTittle">My First Love</h4>
+                    <div class="bookCard">
+                        <div class="bookImg">
+                            <img src="../assets/bookImages/myFirstLover.png" alt="bookImage" />
+                        </div>
+
+                        <div class="bookBio">
+                            <h5 class="bookAuthor">Name Surname, 2000</h5>
+                            <h6 class="bookCategory">Category: <span>General</span></h6>
+                            <p class="bookDeskrp">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a ty ...
+                            </p>
+                            <a href="./books/book2.html">BOOK OVERVIEW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <h4 class="bookTittle">My Little Life</h4>
+
+                    <div class="bookCard">
+                        <div class="bookImg">
+                            <img src="../assets/bookImages/myLittleLife.png" alt="bookImage" />
+                        </div>
+
+                        <div class="bookBio">
+                            <h5 class="bookAuthor">Name Surname, 2005</h5>
+                            <h6 class="bookCategory">Category: <span>General</span></h6>
+                            <p class="bookDeskrp">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a ty ...
+                            </p>
+                            <a href="./books/book3.html">BOOK OVERVIEW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <h4 class="bookTittle">The Lost Trip</h4>
+
+                    <div class="bookCard">
+                        <div class="bookImg">
+                            <img src="../assets/bookImages/theLastTrip.png" alt="bookImage" />
+                        </div>
+
+                        <div class="bookBio">
+                            <h5 class="bookAuthor">Name Surname, 2008</h5>
+                            <h6 class="bookCategory">
+                                Category: <span>History, Fantasy</span>
+                            </h6>
+                            <p class="bookDeskrp">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a ty ...
+                            </p>
+                            <a href="./books/book4.html">BOOK OVERVIEW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <h4 class="bookTittle">Dark</h4>
+
+                    <div class="bookCard">
+                        <div class="bookImg">
+                            <img src="../assets/bookImages/dark.png" alt="bookImage" />
+                        </div>
+
+                        <div class="bookBio">
+                            <h5 class="bookAuthor">Name Surname, 2018</h5>
+                            <h6 class="bookCategory">Category: <span>Fantasy</span></h6>
+                            <p class="bookDeskrp">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a ty ...
+                            </p>
+                            <a href="./books/book5.html">BOOK OVERVIEW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <h4 class="bookTittle">Find Me</h4>
+
+                    <div class="bookCard">
+                        <div class="bookImg">
+                            <img src="../assets/bookImages/findMe.png" alt="bookImage" />
+                        </div>
+
+                        <div class="bookBio">
+                            <h5 class="bookAuthor">Name Surname, 2021</h5>
+                            <h6 class="bookCategory">
+                                Category: <span>Literary, History</span>
+                            </h6>
+                            <p class="bookDeskrp">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a ty ...
+                            </p>
+                            <a href="./books/book6.html">BOOK OVERVIEW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of books -->
+            <!-- pagination -->
+            <nav class="pagination">
+                <label for="pagesNum">Rows per page:</label>
+                <select name="pagesNum" id="pagesNum">
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                </select>
+                <span class="pagesAll">1-6 of 100</span>
+                <button class="arrows">
+                    <!-- <img src="../assets/images/left.png" alt="previous arrow" /> -->
+                </button>
+                <button class="arrows">
+                    <!-- <img src="../assets/images/right.png" alt="next arrow" /> -->
+                </button>
+            </nav>
+        </div>
 
 
     </main>
