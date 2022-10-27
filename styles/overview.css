@@ -1,0 +1,212 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/fonts/Montserrat-Regular.ttf);
+  /* font-weight: 700; */
+}
+@font-face {
+  font-family: Karla;
+  src: url(../assets/fonts/Karla-Regular.ttf);
+}
+:root {
+  --white: #f2efdc;
+  --gray: #837e72;
+  --black: #160f09;
+  --myFirstFont: Montserrat;
+  --mySecondFont: Karla;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  background-color: var(--black);
+  color: #f2efdc;
+}
+
+/* header section */
+header {
+  background-image: url(../assets/images/headerBcgr.png);
+  background-size: contain;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw 0;
+}
+.left,
+.right {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.menu {
+  border: 0;
+  color: var(--white);
+}
+.burger {
+  background: url("../assets/images/hamburger.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-inline-start: 2vw;
+  width: 2vw;
+  height: 100%;
+}
+.avatar {
+  background: url("../assets/images/avatar.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-inline-end: 2vw;
+  width: 2vw;
+  height: 100%;
+}
+.left h2 {
+  font-family: var(--myFirstFont);
+  font-size: 1.6vw;
+  margin-left: 2.4vw;
+}
+
+/* main section */
+
+.sideMenu {
+  /* display: none; */
+  border-right: 1px solid var(--white);
+  font: 500 1.2vw var(--mySecondFont);
+  padding: 1vw 2vw;
+  background-image: url(../assets/images/sideMenuBcgr.png);
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-size: 90% 100%;
+}
+
+.sideMenu ul {
+  list-style: none;
+  color: var(--white);
+  padding-right: 1vw;
+}
+.sideMenu li > ul {
+  display: none;
+}
+
+.sideMenu ul li {
+  padding: 1.2vh 0;
+}
+.sideMenu a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: var(--white);
+  padding: 0 3vw;
+}
+
+.home {
+  background-image: url(../assets/images/home.png);
+}
+
+.categories {
+  background-image: url(../assets/images/list.png),
+    url(../assets/images/right.png);
+}
+
+.admin {
+  background-image: url(../assets/images/admin.png),
+    url(../assets/images/right.png);
+}
+
+.home,
+.categories,
+.admin {
+  background-repeat: no-repeat;
+  background-position: center left, center right;
+  background-size: contain, auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-image: url(../assets/images/Golden_book.svg.png);
+  background-position: 6.47% 100%;
+  background-size: 58% 78%;
+  background-repeat: no-repeat;
+}
+
+.bookOverview {
+  /* display: grid;
+  grid-template-rows: auto 1fr auto; */
+  display: flex;
+  flex-direction: column;
+  padding: 1vw 2vw;
+  gap: 2vh;
+}
+.bookOverview h1 {
+  font-family: var(--myFirstFont);
+  font-size: 2.2vw;
+}
+
+.book {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 4px;
+  row-gap: 2vh;
+}
+
+.bookTittle {
+  font-family: var(--myFirstFont);
+  font-size: 1.8vw;
+  padding: 2vh 1vw;
+}
+.bookCard {
+  font-family: var(--mySecondFont);
+  font-weight: 300;
+  font-size: 1.4vw;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 2%;
+  min-height: 42vh;
+  padding: 2vh 1vw;
+}
+.bookImg {
+  background-image: url(../assets/bookImages/myFirstLover.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  border-radius: 4px;
+}
+.bookBio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bookBio p {
+  font-size: 1.2vw;
+}
+.bookOverview button {
+  width: 20%;
+  align-self: flex-end;
+  font-size: 1.8vw;
+  padding: 8px 16px;
+  background-color: var(--gray);
+  border-radius: 4px;
+}
+.bookOverview button a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+/* footer section */
+footer {
+  text-align: center;
+  font: 500 1.2vw var(--mySecondFont);
+  padding: 1vw 0;
+  background-image: url(../assets/images/footerBcgr.png);
+  background-size: contain;
+}
