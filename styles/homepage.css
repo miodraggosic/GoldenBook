@@ -147,7 +147,7 @@ main {
 .library {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
-  margin: 0 6%;
+  margin: 0 4%;
 }
 
 .breadcrumb {
@@ -224,13 +224,17 @@ main {
 }
 
 .book {
-  display: flex;
+  /* display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-rows: auto 1fr;
   color: var(--black);
   background-color: var(--white);
   border-radius: 4px;
   padding: 4%;
+  gap: 4%;
+  align-items: center;
 }
 
 .bookTittle {
@@ -239,26 +243,50 @@ main {
 }
 
 .bookCard {
-  display: flex;
-  flex-flow: row nowrap;
+  /* display: flex;
+  flex-flow: row nowrap; */
+  display: grid;
+  grid-template-columns: 4fr 5fr;
   column-gap: 4%;
 }
 
 .bookImg {
-  flex: 1;
+  /* flex: 1; */
   border-radius: 4px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.one {
+  background-image: url(../assets/bookImages/moneyPower.png);
+}
+.two {
+  background-image: url(../assets/bookImages/myFirstLover.png);
+}
+.three {
+  background-image: url(../assets/bookImages/myLittleLife.png);
+}
+.four {
+  background-image: url(../assets/bookImages/theLastTrip.png);
+}
+.five {
+  background-image: url(../assets/bookImages/dark.png);
+}
+.six {
+  background-image: url(../assets/bookImages/findMe.png);
 }
 
-.bookImg img {
-  width: 100%;
+/* .bookImg img {
   height: -webkit-fill-available;
-}
+  width: 100%;
+} */
 
 .bookBio {
-  flex: 2;
+  /* flex: 2; */
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  gap: 1.2vh;
+  /* justify-content: space-between; */
   font: 1vw var(--mySecondFont);
 }
 .bookAuthor {
