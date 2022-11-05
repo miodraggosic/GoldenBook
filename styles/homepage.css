@@ -80,6 +80,10 @@ header nav {
 }
 /* main section */
 
+.show {
+  display: none;
+}
+
 .sideMenu {
   /* display: none; */
   border-right: 1px solid var(--white);
@@ -97,9 +101,9 @@ header nav {
   padding-right: 1vw;
 }
 
-.sideMenu li > ul {
+/* .sideMenu li > ul {
   display: none;
-}
+} */
 
 .sideMenu ul li {
   padding: 1.2vh 0;
@@ -352,4 +356,13 @@ footer {
   padding: 1vw 0;
   background-image: url(../assets/images/footerBcgr.png);
   background-size: contain;
+}
+
+@media only screen and (max-width: 1250px) {
+  .bookCard {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bookBio {
+    gap: 1.8vh;
+  }
 }
