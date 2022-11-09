@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: Montserrat;
-  src: url(../assets/fonts/Montserrat-Regular.ttf);
+  src: url(../fonts/Montserrat-Regular.ttf);
   /* font-weight: 700; */
 }
 @font-face {
   font-family: Karla;
-  src: url(../assets/fonts/Karla-Regular.ttf);
+  src: url(../fonts/Karla-Regular.ttf);
 }
 :root {
   --white: #f2efdc;
@@ -28,7 +28,7 @@ main {
   display: flex;
   justify-content: center;
   margin: 4vh auto;
-  background-image: url(../assets/images/Golden_book.svg.png);
+  background-image: url(../images/Golden_book.svg.png);
   background-position: 6.47% 100%;
   background-size: 58% 78%;
   height: 92vh;
