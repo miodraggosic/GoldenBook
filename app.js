@@ -1,10 +1,12 @@
 import { Users, User } from "./components/User.js";
+import Library from "./components/Library.js";
+import getBooksDb from "./components/books.js";
 
 (function () {
   const inpEmail = document.getElementById("email");
   const inpPass = document.getElementById("password");
   const submitBtn = document.querySelector("button");
-  const inputForm = document.querySelector(".inputForm");
+  // const inputForm = document.querySelector(".inputForm");
 
   let usersDb = JSON.parse(localStorage.getItem("users"));
   let updateDb = (arr) => localStorage.setItem("users", JSON.stringify(arr));
@@ -17,7 +19,12 @@ import { Users, User } from "./components/User.js";
 
   getUsersDb();
 
-  console.log(users);
+  // const booksDb = [];
+
+  // getBooksDb(API, booksDb);
+
+  // console.log(users);
+  // console.log(booksDb);
 
   submitBtn.addEventListener("click", () => {
     let user = new User(inpEmail.value, inpPass.value);
