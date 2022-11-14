@@ -1,4 +1,7 @@
 import { Users, User, Admin } from "./components/Users.js";
+import { Users, User } from "./components/User.js";
+import Library from "./components/Library.js";
+import getBooksDb from "./components/books.js";
 
 (function () {
   const inpEmail = document.getElementById("email");
@@ -38,6 +41,12 @@ import { Users, User, Admin } from "./components/Users.js";
   // // admin.deleteUser("mile@gmail.co");
 
   console.log(users);
+  // const booksDb = [];
+
+  // getBooksDb(API, booksDb);
+
+  // console.log(users);
+  // console.log(booksDb);
 
   submitBtn.addEventListener("click", (e) => {
     e.preventDefault();

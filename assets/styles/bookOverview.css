@@ -1,10 +1,10 @@
 @font-face {
   font-family: Montserrat;
-  src: url(../assets/fonts/Montserrat-Regular.ttf);
+  src: url(../fonts/Montserrat-Regular.ttf);
 }
 @font-face {
   font-family: Karla;
-  src: url(../assets/fonts/Karla-Regular.ttf);
+  src: url(../fonts/Karla-Regular.ttf);
 }
 :root {
   --white: #f2efdc;
@@ -29,7 +29,7 @@ body {
 
 /* header section */
 header {
-  background-image: url(../assets/images/headerBcgr.png);
+  background-image: url(../images/headerBcgr.png);
   background-size: contain;
 }
 
@@ -49,7 +49,7 @@ header nav {
   color: var(--white);
 }
 .burger {
-  background: url("../assets/images/hamburger.png");
+  background: url("../images/hamburger.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@ header nav {
   height: 100%;
 }
 .avatar {
-  background: url("../assets/images/avatar.png");
+  background: url("../images/avatar.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -79,7 +79,7 @@ header nav {
   border-right: 1px solid var(--white);
   font: 500 1.2vw var(--mySecondFont);
   padding: 1vw 2vw;
-  background-image: url(../assets/images/sideMenuBcgr.png);
+  background-image: url(../images/sideMenuBcgr.png);
   background-repeat: no-repeat;
   background-origin: padding-box;
   background-size: 90% 100%;
@@ -106,17 +106,15 @@ header nav {
 }
 
 .home {
-  background-image: url(../assets/images/home.png);
+  background-image: url(../images/home.png);
 }
 
 .categories {
-  background-image: url(../assets/images/list.png),
-    url(../assets/images/right.png);
+  background-image: url(../images/list.png), url(../images/right.png);
 }
 
 .admin {
-  background-image: url(../assets/images/admin.png),
-    url(../assets/images/right.png);
+  background-image: url(../images/admin.png), url(../images/right.png);
 }
 
 .home,
@@ -130,7 +128,7 @@ header nav {
 main {
   display: grid;
   grid-template-columns: auto auto;
-  background-image: url(../assets/images/Golden_book.svg.png);
+  background-image: url(../images/Golden_book.svg.png);
   background-position: 6.47% 100%;
   background-size: 58% 78%;
   background-repeat: no-repeat;
@@ -174,7 +172,7 @@ main {
   padding: 2vh 1vw;
 }
 .bookImg {
-  background-image: url(../assets/bookImages/myFirstLover.png);
+  background-image: url(../bookImages/myFirstLover.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -206,6 +204,6 @@ footer {
   text-align: center;
   font: 500 1.2vw var(--mySecondFont);
   padding: 1vw 0;
-  background-image: url(../assets/images/footerBcgr.png);
+  background-image: url(../images/footerBcgr.png);
   background-size: contain;
 }
