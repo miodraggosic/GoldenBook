@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="../assets/styles/styles.css"> -->
+    <link rel="stylesheet" href="../assets/styles/homepage.css">
+    <script src="../components/navToggle.js" defer></script>
+    <!-- <script type="module" src="../app.js"></script> -->
+    <title>Homepage</title>
+</head>
+
+<body>
+    <!-- header nav -->
+    <header>
+        <nav>
+            <div class="left">
+                <button class="burger menu">
+                </button>
+                <h2>Golden Book.</h2>
+            </div>
+            <div class="right">
+                <button class="avatar menu">
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- main section start -->
+    <main>
+        <!-- sidemenu nav-->
+        <nav class="sideMenu show">
+            <ul>
+                <li>
+                    <a href="./homepage.html" class="home">HOMEPAGE</a>
+                </li>
+                <li>
+                    <a href="#" class="categories">CATEGORIES</a>
+                    <ul class="show">
+                        <li>
+                            <a href="general.html">General</a>
+                        </li>
+                        <li>
+                            <a href="#">Fantasy</a>
+                        </li>
+                        <li>
+                            <a href="#">History</a>
+                        </li>
+                        <li>
+                            <a href="#">Literary</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#" class="admin">ADMIN</a>
+                    <ul class="show">
+                        <li>
+                            <a href="books.html">Books</a>
+                        </li>
+                        <li>
+                            <a href="categories.html">Categories</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </nav>
+
+        <div class="library">
+            <div>
+                <h1>Add book</h1>
+            </div>
+            <div class="addBook">
+
+            </div>
+
+
+
+            <nav class="pagination">
+                <label for="pagesNum">Rows per page:</label>
+                <select name="pagesNum" id="pagesNum">
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                </select>
+                <span class="pagesAll">1-6 of 100</span>
+                <button class="arrows">
+                    <!-- <img src="../assets/images/left.png" alt="previous arrow" /> -->
+                </button>
+                <button class="arrows">
+                    <!-- <img src="../assets/images/right.png" alt="next arrow" /> -->
+                </button>
+            </nav>
+        </div>
+    </main>
+
+    <footer>
+        <h4>Orion Inovation - ANGULAR WORKSHOP 2022</h4>
+    </footer>
+</body>
+
+</html>
