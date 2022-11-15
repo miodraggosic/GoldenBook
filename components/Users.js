@@ -5,8 +5,22 @@ function Users() {
     password: /^[\w@-]{8,20}$/,
   };
 }
+Users.prototype.errorMsg = function (arr) {
+  arr.forEach((field) => {
+    if (field.classList.contains("red")) {
+      field.attributes.placeholder.value = "Please try again";
+    }
+  });
+};
 Users.prototype.addUser = function (user) {
   this.usersList.push(user);
+};
+Users.prototype.deleteUser = function (arr) {
+  arr.forEach(
+    (user) =>
+      (this.usersList = this.usersList.filter((users) => users.email != user))
+  );
+  // this.usersList = this.usersList.filter((users) => users.email != email);
 };
 Users.prototype.getUsers = function (arr) {
   arr.forEach((user) => {
@@ -15,16 +29,25 @@ Users.prototype.getUsers = function (arr) {
   });
 };
 
-// Users.prototype.validUser = function (user) {
-//   if (
-//     this.regex.email.test(user.email) &&
-//     this.regex.password.test(user.password)
-//   ) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
+Users.prototype.validUser = function (arr) {
+  function validate(field, regex) {
+    let result = regex.test(field.value);
+    if (result) {
+      field.classList.remove("red");
+      field.classList.add("green");
+    } else {
+      field.classList.add("red");
+      field.value = "";
+    }
+  }
+
+  arr.forEach((field) => validate(field, this.regex[field.name]));
+  let arrFields = Array.from(arr);
+
+  return arrFields.some((input) => input.classList.contains("red"))
+    ? false
+    : true;
+};
 
 function User(email, pass) {
   this.email = email;
@@ -42,28 +65,9 @@ User.prototype.logout = function () {
 
 function Admin(...arg) {
   User.apply(this, arg);
-  // Users.call(this);
-
   this.admin = true;
 }
 
 Admin.prototype = Object.create(User.prototype);
-
-Admin.prototype.addBook = function (book) {};
-
-Admin.prototype.deleteUser = function (user) {
-  // console.log(user);
-  // let users = this.getUsers;
-  // console.log(users);
-  // return users;
-};
-
-// let adm = new Admin("mile", "133465");
-// console.log(adm);
-// adm.deleteUser("mile");
-
-// let checkUser = users.filter((user) => user.email == this.email);
-// console.log(checkUser);
-// checkUser.length > 0 ? alert("email alredy exist") : users.push(this);
 
 export { Users, User, Admin };
