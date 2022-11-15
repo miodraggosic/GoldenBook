@@ -5,7 +5,7 @@ import getBooksDb from "./components/books.js";
 (function () {
   const inpEmail = document.getElementById("email");
   const inpPass = document.getElementById("password");
-  const submitBtn = document.querySelector("button");
+  const submitBtn = document.querySelector("button[type=submit]");
   const inputForm = document.querySelector(".inputForm");
   const inputs = document.querySelectorAll("input");
   console.log(inputs);
