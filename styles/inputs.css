@@ -44,15 +44,13 @@
 input.green {
   border: 2px solid #567d49;
 }
-/* input.green:active {
-  border: 2px solid #567d49;
-} */
+
 input.red {
   border: 2px solid #9e3838;
 }
-/* input.red:focus-visible {
-  border: 2px solid #9e3838;
-} */
+input.red::placeholder {
+  color: #9e3838;
+}
 
 input::placeholder {
   font-size: 1.2vw;
