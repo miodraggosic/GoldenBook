@@ -19,9 +19,16 @@ import getBooksDb from "./components/books.js";
 
   getUsersDb();
 
-  // const booksDb = [];
+  //Books
 
-  // getBooksDb(API, booksDb);
+  const Api = "../../booksDb.json";
+
+  let booksDb = [];
+  getBooksDb(Api, booksDb);
+
+  let library = new Library();
+
+  console.log(booksDb);
 
   // console.log(users);
   // console.log(booksDb);
