@@ -24,9 +24,19 @@ import getBooksDb from "./components/books.js";
   let admin = new Admin("gosmio88@gmail.com", 132456789);
   console.log(admin);
 
+  //Books
+
+  const Api = "../../booksDb.json";
+
+  let booksDb = [];
+  getBooksDb(Api, booksDb);
+
+  let library = new Library();
+
+  console.log(booksDb);
+
   submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
-
     let user = new User(inpEmail.value, inpPass.value);
     console.log(users.usersList);
 

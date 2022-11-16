@@ -1,8 +1,8 @@
-const getBooksDb = function (api, array) {
-  fetch(api)
+const getBooksDb = async (api, array) => {
+  await fetch(api)
     .then((response) => response.json())
     .then((data) =>
-      data.results.forEach((elem) => {
+      data.books.forEach((elem) => {
         array.push(elem);
       })
     );
