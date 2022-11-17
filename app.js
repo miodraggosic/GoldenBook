@@ -7,8 +7,7 @@ import getBooksDb from "./components/books.js";
   const inpPass = document.getElementById("password");
   const submitBtn = document.querySelector("button[type=submit]");
   const inputForm = document.querySelector(".inputForm");
-  const inputs = document.querySelectorAll("input");
-  console.log(inputs);
+  const inputs = document.querySelectorAll(".userForm input");
 
   //local user base
   let usersDb = JSON.parse(localStorage.getItem("users"));
@@ -26,19 +25,22 @@ import getBooksDb from "./components/books.js";
 
   //Books
 
-  const Api = "../../booksDb.json";
+  const Api = "http://localhost:3000/books";
+  const booksDb = [];
 
-  let booksDb = [];
-  getBooksDb(Api, booksDb);
+  let populateDb = () => getBooksDb(Api, booksDb);
+  populateDb();
 
   let library = new Library();
-
-  console.log(booksDb);
 
   submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
     let user = new User(inpEmail.value, inpPass.value);
     console.log(users.usersList);
+    console.log(booksDb);
+    library.getBooks(booksDb);
+
+    console.log(library.bookList);
 
     users.validUser(inputs)
       ? (users.addUser(user), updateDb(users.usersList), inputForm.submit())
