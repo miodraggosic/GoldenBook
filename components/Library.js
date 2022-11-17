@@ -63,4 +63,4 @@ function Book(url, title, author, year, category, isbn, description) {
   this.description = description;
 }
 
-export default Library;
+export { Library, Book };
