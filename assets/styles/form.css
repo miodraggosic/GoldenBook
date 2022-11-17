@@ -80,7 +80,8 @@
 }
 
 .bookForm input,
-.bookForm select {
+.bookForm select,
+.bookForm button {
   display: inline-block;
   width: 48%;
 }
