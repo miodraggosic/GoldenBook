@@ -1,4 +1,7 @@
 @import url(./inputs.css);
+
+/* userForm */
+
 .userForm {
   display: flex;
   flex-direction: column;
@@ -23,11 +26,15 @@
   margin-bottom: 30vh;
 }
 
-.userForm h2 {
+.userForm > h2 {
   font-family: var(--myFirstFont);
   font-weight: 700;
   font-size: 3.6vw;
   color: var(--white);
+  width: 60%;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: 5%;
 }
 
 .userForm footer {
@@ -43,13 +50,6 @@
   flex-flow: column nowrap;
   width: 100%;
   margin-bottom: auto;
-}
-.userForm > h2 {
-  width: 60%;
-  text-align: left;
-  /* margin-top: 22vh; */
-  margin-top: auto;
-  margin-bottom: 5%;
 }
 
 .inputForm input {
@@ -69,4 +69,26 @@
 .inputForm a {
   color: inherit;
   display: inline-block;
+}
+
+/* bookForm */
+.bookForm form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bookForm input,
+.bookForm select {
+  display: inline-block;
+  width: 48%;
+}
+.bookForm input::placeholder,
+.bookForm select::placeholder {
+  font-size: 1.8vw;
+}
+
+.bookForm textarea {
+  width: 100%;
 }
