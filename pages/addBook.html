@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="../assets/styles/styles.css"> -->
+    <link rel="stylesheet" href="../assets/styles/form.css">
     <link rel="stylesheet" href="../assets/styles/homepage.css">
     <script src="../components/navToggle.js" defer></script>
     <!-- <script type="module" src="../app.js"></script> -->
@@ -28,7 +28,7 @@
         </nav>
     </header>
     <!-- main section start -->
-    <main>
+    <main class="addBook">
         <!-- sidemenu nav-->
         <nav class="sideMenu show">
             <ul>
@@ -76,20 +76,21 @@
             </div>
             <div class="bookForm">
                 <form action="./homepage.html">
-                    <input type="text">
-                    <input type="text">
-                    <select name="author" id="">
+                    <input class="input big" type="text" name="imageUrl" placeholder="ImageUrl">
+                    <input class="input big" type="text"
+                        name="title, starts with Upercasse betwen 10 and 50 characters " placeholder="Title">
+                    <select class="input big" name="author" id="">
+                        <option value="">Author</option>
 
                     </select>
-                    <input type="date" name="" id="">
-                    <select name="categories" id="">
-
-
+                    <input class="input big" type="date" name="date" id="" placeholder="Date">
+                    <select class="input big" name="categories" id="">
+                        <option value="">Categories</option>
                     </select>
-                    <input type="text">
-                    <textarea name="descrp" id="" cols="30" rows="10">
+                    <input class="input big" type="text" name="isbn" placeholder="ISBN">
+                    <textarea class="input big" name="description" id="" cols="30" rows="10"
+                        placeholder="Description, not more than 250 characters"></textarea>
 
-                </textarea>
                 </form>
 
             </div>
