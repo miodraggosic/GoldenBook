@@ -24,10 +24,9 @@ import { Users, User, Admin } from "./components/Users.js";
   submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
     let user = new User(inpEmail.value, inpPass.value);
-    console.log(users.usersList);
 
     users.validUser(inputs)
       ? (users.addUser(user), updateDb(users.usersList), inputForm.submit())
-      : (users.errorMsg(inputs), console.log(admin));
+      : users.errorMsg(inputs);
   });
 })();
