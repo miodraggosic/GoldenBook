@@ -9,6 +9,5 @@ const apiExport = [
 ];
 
 const Api = Object.fromEntries(apiExport);
-console.log(Api.categories);
 
 export default Api;
