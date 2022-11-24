@@ -1,4 +1,5 @@
 import { Users, User, Admin } from "./components/Users.js";
+import Api from "./assets/js/env.js";
 
 (function () {
   const inpEmail = document.getElementById("email");
@@ -15,7 +16,7 @@ import { Users, User, Admin } from "./components/Users.js";
     usersDb == null ? updateDb(users.userslist) : users.getUsers(usersDb);
   };
 
-  let users = new Users();
+  let users = new Users(Api);
   getUsersDb();
 
   let admin = new Admin("gosmio88@gmail.com", 132456789);
