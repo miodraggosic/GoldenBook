@@ -7,27 +7,13 @@ function Users(api) {
     password: /^[\w@-]{8,20}$/,
   };
 }
-Users.prototype.errorMsg = function (arr) {
-  arr.forEach((field) => {
-    if (field.classList.contains("red")) {
-      field.attributes.placeholder.value = "Please try again";
-    }
-  });
-};
-Users.prototype.addUser = function (user) {
-  this.Api.push(user);
-};
-Users.prototype.deleteUser = function (arr) {
-  arr.forEach(
-    (user) => (this.Api = this.Api.filter((users) => users.email != user))
-  );
-  // this.Api = this.Api.filter((users) => users.email != email);
-};
-Users.prototype.getUsers = function (arr) {
-  arr.forEach((user) => {
-    let newUser = new User(user.email, user.password);
-    this.addUser(newUser);
-  });
+
+Users.prototype.getUsers = function () {
+  fetch(this.Api, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((data) => data);
 };
 
 Users.prototype.validUser = function (arr) {
@@ -37,6 +23,31 @@ Users.prototype.validUser = function (arr) {
   return arrFields.some((input) => input.classList.contains("red"))
     ? false
     : true;
+};
+
+Users.prototype.addUser = function (user) {
+  fetch(this.Api, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(user),
+  }).then((res) => console.log(user, res));
+};
+
+Users.prototype.deleteUser = function (arr) {
+  arr.forEach(
+    (user) => (this.Api = this.Api.filter((users) => users.email != user))
+  );
+  // this.Api = this.Api.filter((users) => users.email != email);
+};
+
+Users.prototype.errorMsg = function (arr) {
+  arr.forEach((field) => {
+    if (field.classList.contains("red")) {
+      field.attributes.placeholder.value = "Please try again";
+    }
+  });
 };
 
 function User(email, pass) {
