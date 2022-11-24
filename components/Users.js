@@ -1,5 +1,7 @@
-function Users() {
-  this.usersList = [];
+import validate from "../assets/js/helperFunc.js";
+
+function Users(api) {
+  this.Api = api.users;
   this.regex = {
     email: /^\w+([\.-]?\w+)*@\w{3,}(\.\w{2,3})+$/,
     password: /^[\w@-]{8,20}$/,
@@ -13,14 +15,13 @@ Users.prototype.errorMsg = function (arr) {
   });
 };
 Users.prototype.addUser = function (user) {
-  this.usersList.push(user);
+  this.Api.push(user);
 };
 Users.prototype.deleteUser = function (arr) {
   arr.forEach(
-    (user) =>
-      (this.usersList = this.usersList.filter((users) => users.email != user))
+    (user) => (this.Api = this.Api.filter((users) => users.email != user))
   );
-  // this.usersList = this.usersList.filter((users) => users.email != email);
+  // this.Api = this.Api.filter((users) => users.email != email);
 };
 Users.prototype.getUsers = function (arr) {
   arr.forEach((user) => {
@@ -30,17 +31,6 @@ Users.prototype.getUsers = function (arr) {
 };
 
 Users.prototype.validUser = function (arr) {
-  function validate(field, regex) {
-    let result = regex.test(field.value);
-    if (result) {
-      field.classList.remove("red");
-      field.classList.add("green");
-    } else {
-      field.classList.add("red");
-      field.value = "";
-    }
-  }
-
   arr.forEach((field) => validate(field, this.regex[field.name]));
   let arrFields = Array.from(arr);
 
