@@ -9,15 +9,16 @@ import Api from "./assets/js/env.js";
   const inputs = document.querySelectorAll(".userForm input");
 
   //local user base
-  let usersDb = JSON.parse(localStorage.getItem("users"));
-  let updateDb = (arr) => localStorage.setItem("users", JSON.stringify(arr));
+  // let usersDb = JSON.parse(localStorage.getItem("users"));
+  // let updateDb = (arr) => localStorage.setItem("users", JSON.stringify(arr));
 
-  const getUsersDb = () => {
-    usersDb == null ? updateDb(users.userslist) : users.getUsers(usersDb);
-  };
+  // const getUsersDb = () => {
+  //   usersDb == null ? updateDb(users.userslist) : users.getUsers(usersDb);
+  // };
 
   let users = new Users(Api);
-  getUsersDb();
+  users.getUsers();
+  // getUsersDb();
 
   let admin = new Admin("gosmio88@gmail.com", 132456789);
   console.log(admin);
@@ -27,7 +28,7 @@ import Api from "./assets/js/env.js";
     let user = new User(inpEmail.value, inpPass.value);
 
     users.validUser(inputs)
-      ? (users.addUser(user), updateDb(users.usersList), inputForm.submit())
+      ? (users.addUser(user), inputForm.submit())
       : users.errorMsg(inputs);
   });
 })();
